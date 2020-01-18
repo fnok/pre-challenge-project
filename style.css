@@ -13,21 +13,24 @@ body {
 	}
 
 p,li {
-	font-family: Helvetica;
+	font-family: Georgia;
 	size: 12px;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3 {
 	font-family: Zilla Slab Highlight;
-	font-weight: bold;
 }
 
-h1 {font-size: 30px}
-h2 {font-size: 24px}
-h3 {font-size: 22px}
-h4 {font-size: 20px}
-h5 {font-size: 18px}
-h6 {font-size: 14px}
+h4,h5,h6 {
+	font-family: Zilla Slab;
+}
+
+h1 {font-size: 30px;}
+h2 {font-size: 24px;}
+h3 {font-size: 22px;}
+h4 {font-size: 20px;}
+h5 {font-size: 18px;}
+h6 {font-size: 14px;}
 
 .nav-list ul{
 	display: inline;
@@ -53,13 +56,14 @@ h6 {font-size: 14px}
 }
 
 div.nav {
+	z-index: 1;
 	position: sticky;
 	top:0;
 	height: 2rem;
 	background-color: white;
 	opacity: 90%;
 	padding: 1.6rem 1.5rem;
-	border-radius: 0 0 4px 4px;
+	border-radius: 4px;
 	/* vertical-align: middle; */
 }
 
@@ -70,10 +74,38 @@ div.nav img {
 	margin-top: -1.2rem;
 }
 
+div.back2top {
+	width: 1.4rem;
+	height: 1.8rem;
+	background-color: white;
+	opacity: 90%;
+	border-radius: 4px 4px 0 0;
+	position: fixed;
+	bottom: 0;
+	right: 10%;
+	padding: .4rem .7rem 1.2rem .7rem;
+}	
+
+
+div.active {
+	background-color: transparent;
+	padding-top: 3rem;
+	bottom: -.6rem;
+	transition: bottom 1s ease-in-out;
+}
+
+div.active:hover {
+	bottom: 0rem;
+}
+
 div.center {
 	margin: 5% 15%;
 	padding: 1% 5%;
 	background-color: white;
 	opacity: 50%;
 	border-radius: 4px;
+}
+div.text {
+	opacity: 100%;
+	color: #000;
 }
