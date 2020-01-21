@@ -1,9 +1,16 @@
+html {
+	font-size: 62.5%;
+}
+
 @font-face {
   font-family: Zilla Slab Highlight;
   src: url(ZillaSlabHighlight-Regular.ttf);
   font-family: Zilla Slab;
   src: url(ZillaSlab-Medium.ttf);
+  font-family: JosefinSans;
+  src: url(JosefinSans-regular.ttf);
 }
+
 body {
 	background-image: url("Wattakozhumbe.jpg");	
 	background-attachment: fixed;
@@ -13,8 +20,8 @@ body {
 	}
 
 p,li {
-	font-family: Georgia;
-	size: 12px;
+	font-family: Arial;
+	font-size: 1.5rem;
 }
 
 h1,h2,h3 {
@@ -25,53 +32,76 @@ h4,h5,h6 {
 	font-family: Zilla Slab;
 }
 
-h1 {font-size: 30px;}
-h2 {font-size: 24px;}
-h3 {font-size: 22px;}
-h4 {font-size: 20px;}
-h5 {font-size: 18px;}
-h6 {font-size: 14px;}
+h1 {font-size: 3rem;}
+h2 {font-size: 2.4rem;}
+h3 {font-size: 2.2rem;}
+h4 {font-size: 2rem;}
+h5 {font-size: 1.8rem;}
+h6 {font-size: 1.4rem;}
 
-.nav-list ul{
-	display: inline;
-	position: relative;
-	list-style: none;
-}
 
-.nav-list li{
-	margin: 0 2%;
-	display: inline;
+.pretty-links a,a:visited,a:active {
 	font-family: Zilla Slab;
 	text-transform: capitalize;
-	font-size: 1.5rem;
-}
-.nav-list a,a:visited,a:active {
 	color: #232323;
 	text-decoration-line: none;
 	box-shadow: inset 0 -.3rem 0 -1px #ffd204;
 	transition: box-shadow .15s ease-in-out 0s;
 }
-.nav-list a:hover {
+.pretty-links a:hover {
 	box-shadow: inset 0 -1.7rem 0 -1px #ffd204;
 }
 
-div.nav {
+nav.flex {
 	z-index: 1;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-flow: row;
 	position: sticky;
 	top:0;
-	height: 2rem;
+	height: 10vh;
 	background-color: white;
 	opacity: 90%;
-	padding: 1.6rem 1.5rem;
 	border-radius: 4px;
-	/* vertical-align: middle; */
+	align-items: center;
+	padding: 1% 0;
+}
+@media only screen and (max-width: 600px) {
+	
+	nav.flex {
+		height: auto;
+		flex-wrap: wrap;
+		flex-flow: column;
+		}
 }
 
-div.nav img {
-	float: left;
-	height: 4.5rem; 
-	width: auto;
-	margin-top: -1.2rem;
+nav.flex > div {
+	margin: .5%;
+	line-height: 40px;
+	flex-grow: 0;
+	flex-shrink: 1;
+	font-size: 20px;
+}
+
+
+main.flexed {
+	display: flex;
+	justify-content: center;
+	margin: 5% 0;
+}
+
+.logo {
+	max-height: 4rem;
+	flex-grow: 1;
+	margin: 0 1rem;
+}
+
+.flexed > div {
+	background-color: white;
+	opacity: 70%;
+	border-radius: 4px;
+	padding: 0 5%;
+	max-width: 70%;
 }
 
 div.back2top {
@@ -109,3 +139,4 @@ div.text {
 	opacity: 100%;
 	color: #000;
 }
+section {margin: 0 0 4rem 0;}
