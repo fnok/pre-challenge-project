@@ -39,7 +39,7 @@ h4 {font-size: 2rem;}
 h5 {font-size: 1.8rem;}
 h6 {font-size: 1.4rem;}
 
-
+/* rebuilt from outside.com - slightly altered to fit the purpose*/ 
 .pretty-links a,a:visited,a:active {
 	font-family: Zilla Slab;
 	text-transform: capitalize;
@@ -56,66 +56,65 @@ nav.flex {
 	z-index: 1;
 	display: flex;
 	flex-wrap: nowrap;
-	flex-flow: row;
 	position: sticky;
-	top:0;
+	top: 0;
 	height: 10vh;
-	background-color: white;
-	opacity: 90%;
 	border-radius: 4px;
 	align-items: center;
-	padding: 1% 0;
-}
-@media only screen and (max-width: 600px) {
-	
-	nav.flex {
-		height: auto;
-		flex-wrap: wrap;
-		flex-flow: column;
-		}
+	padding: 1%;
+	background-color: white;
+	opacity: 90%;
+	align-items: center;
 }
 
-nav.flex > div {
-	margin: .5%;
+nav.flex > div,img {
+	padding: .5%;
 	line-height: 40px;
-	flex-grow: 0;
-	flex-shrink: 1;
+	flex:;
 	font-size: 20px;
+	/*border: 2px solid red;*/
+	/*height: 100%;*/
+	max-height: 10vh;
+	white-space: nowrap;
+
 }
 
-
-main.flexed {
+.boxed {
 	display: flex;
-	justify-content: center;
-	margin: 5% 0;
+	flex-flow: column;
+	width: 100vw;
+	margin: 3% 0;
+	align-items: center;
+	border: 2px solid blue;
 }
 
 .logo {
-	max-height: 4rem;
-	flex-grow: 1;
 	margin: 0 1rem;
+	max-width: calc(10vh * 2.04);
 }
 
-.flexed > div {
+.box {
 	background-color: white;
 	opacity: 70%;
 	border-radius: 4px;
+	margin: 2% 0;
 	padding: 0 5%;
-	max-width: 70%;
+	width: 60%;
+	border: 2px solid green;
+
+}
+blockquote {
+	font-size: 3rem;
+	font-family: JosefinSans;
+	box-shadow: inset 3.8rem 0 #ffd204;
 }
 
-div.back2top {
-	width: 1.4rem;
-	height: 1.8rem;
-	background-color: white;
-	opacity: 90%;
-	border-radius: 4px 4px 0 0;
-	position: fixed;
-	bottom: 0;
-	right: 10%;
-	padding: .4rem .7rem 1.2rem .7rem;
-}	
-
+/*blockquote::before {
+	content: "";
+	font-size: 3rem;
+	margin-left: -/*3rem;
+ 	border-left: 6px solid lightblue;
+} */
 
 div.active {
 	background-color: transparent;
@@ -128,15 +127,48 @@ div.active:hover {
 	bottom: 0rem;
 }
 
-div.center {
-	margin: 5% 15%;
-	padding: 1% 5%;
-	background-color: white;
-	opacity: 50%;
-	border-radius: 4px;
-}
-div.text {
-	opacity: 100%;
-	color: #000;
-}
 section {margin: 0 0 4rem 0;}
+
+div.back2top {
+	width: 1.4rem;
+	height: 1.8rem;
+	background-color: white;
+	opacity: 70%;
+	border-radius: 4px 4px 0 0;
+	position: fixed;
+	bottom: 0;
+	right: 10%;
+	padding: .4rem .7rem 1.2rem .7rem;
+	z-index: 1;
+}
+
+/*footer {
+	border: 3px solid green;
+	position: fixed;
+	bottom: 0;
+	width: 60%;
+}*/
+
+header.box {
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	opacity: 100%;
+}
+span {box-shadow: inset 0 -1.7rem 0 -1px #ffd204}
+
+@media only screen and (max-width: 600px) {
+	
+	nav.flex {
+		width: auto;
+		height: auto;
+		flex-wrap: wrap;
+		flex-flow: column;
+		align-content: flex-start;
+
+		}
+	.logo {
+		width: 100vw;
+		height: calc(50vw / 2.04);
+	}
+
+}
