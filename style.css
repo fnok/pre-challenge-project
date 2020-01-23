@@ -1,5 +1,6 @@
 html {
 	font-size: 62.5%;
+	overflow-x: hidden;
 }
 
 @font-face {
@@ -12,14 +13,16 @@ html {
 }
 
 body {
+	margin: 0;
 	background-image: url("Wattakozhumbe.jpg");	
 	background-attachment: fixed;
+	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	height: 100%;
 	}
 
-p,li {
+p,li,td {
 	font-family: Arial;
 	font-size: 1.5rem;
 }
@@ -31,6 +34,9 @@ h1,h2,h3 {
 h4,h5,h6 {
 	font-family: Zilla Slab;
 }
+h5, h6 {
+	margin: 0;
+}
 
 h1 {font-size: 3rem;}
 h2 {font-size: 2.4rem;}
@@ -40,7 +46,7 @@ h5 {font-size: 1.8rem;}
 h6 {font-size: 1.4rem;}
 
 /* rebuilt from outside.com - slightly altered to fit the purpose*/ 
-.pretty-links a,a:visited,a:active {
+.pretty a,a:visited,a:active {
 	font-family: Zilla Slab;
 	text-transform: capitalize;
 	color: #232323;
@@ -48,9 +54,10 @@ h6 {font-size: 1.4rem;}
 	box-shadow: inset 0 -.3rem 0 -1px #ffd204;
 	transition: box-shadow .15s ease-in-out 0s;
 }
-.pretty-links a:hover {
+.pretty a:hover {
 	box-shadow: inset 0 -1.7rem 0 -1px #ffd204;
 }
+
 
 nav.flex {
 	z-index: 1;
@@ -59,6 +66,7 @@ nav.flex {
 	position: sticky;
 	top: 0;
 	height: 10vh;
+	width: 100vw;
 	border-radius: 4px;
 	align-items: center;
 	padding: 1%;
@@ -83,9 +91,9 @@ nav.flex > div,img {
 	display: flex;
 	flex-flow: column;
 	width: 100vw;
-	margin: 3% 0;
+	margin: 0;
 	align-items: center;
-	border: 2px solid blue;
+	/*border: 2px solid blue;*/
 }
 
 .logo {
@@ -98,15 +106,15 @@ nav.flex > div,img {
 	opacity: 70%;
 	border-radius: 4px;
 	margin: 2% 0;
-	padding: 0 5%;
+	padding: 3% 5%;
 	width: 60%;
-	border: 2px solid green;
+	/*border: 2px solid green;*/
 
 }
 blockquote {
 	font-size: 3rem;
 	font-family: JosefinSans;
-	box-shadow: inset 3.8rem 0 #ffd204;
+	box-shadow: inset .8rem 0 #ffd204;
 }
 
 /*blockquote::before {
@@ -127,6 +135,22 @@ div.active:hover {
 	bottom: 0rem;
 }
 
+.equal {
+	width: 100%;
+}
+.equal td {
+	padding: .2rem .1rem;
+	width: 50%;
+	vertical-align: top;
+	font-family: Arial;
+
+}
+.equal th {
+	padding: .2rem .1rem;
+	font-size: 1.8rem;
+	text-align: left;
+	font-family: Zilla Slab;
+}
 section {margin: 0 0 4rem 0;}
 
 div.back2top {
@@ -150,11 +174,16 @@ div.back2top {
 }*/
 
 header.box {
+	margin: 30vh 0;
 	padding-top: 10vh;
 	padding-bottom: 10vh;
 	opacity: 100%;
 }
 span {box-shadow: inset 0 -1.7rem 0 -1px #ffd204}
+
+.larger {
+	font-size: 1.8rem;
+}
 
 @media only screen and (max-width: 600px) {
 	
