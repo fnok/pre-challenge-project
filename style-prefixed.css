@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 @font-face {
   font-family: Zilla Slab Highlight;
   src: url(ZillaSlabHighlight-Regular.ttf);
@@ -51,10 +53,11 @@ section {margin: 0 0 4rem 0;}
 blockquote {
 	font-size: 3rem;
 	font-family: JosefinSans;
-	box-shadow: inset .8rem 0 #ffd204;
+	-webkit-box-shadow: inset .8rem 0 #ffd204;
+	        box-shadow: inset .8rem 0 #ffd204;
 }
 
-span {box-shadow: inset 0 -1.7rem 0 -1px #ffd204}
+span {-webkit-box-shadow: inset 0 -1.7rem 0 -1px #ffd204;box-shadow: inset 0 -1.7rem 0 -1px #ffd204}
 
 /** class selectors **/
 
@@ -63,24 +66,37 @@ span {box-shadow: inset 0 -1.7rem 0 -1px #ffd204}
 	font-family: Zilla Slab;
 	text-transform: capitalize;
 	color: #232323;
-	text-decoration-line: none;
-	box-shadow: inset 0 -.3rem 0 -1px #ffd204;
+	-webkit-text-decoration-line: none;
+	        text-decoration-line: none;
+	-webkit-box-shadow: inset 0 -.3rem 0 -1px #ffd204;
+	        box-shadow: inset 0 -.3rem 0 -1px #ffd204;
+	-webkit-transition: -webkit-box-shadow .15s ease-in-out 0s;
+	transition: -webkit-box-shadow .15s ease-in-out 0s;
+	-o-transition: box-shadow .15s ease-in-out 0s;
 	transition: box-shadow .15s ease-in-out 0s;
+	transition: box-shadow .15s ease-in-out 0s, -webkit-box-shadow .15s ease-in-out 0s;
 }
 .pretty a:hover {
-	box-shadow: inset 0 -1.7rem 0 -1px #ffd204;
+	-webkit-box-shadow: inset 0 -1.7rem 0 -1px #ffd204;
+	        box-shadow: inset 0 -1.7rem 0 -1px #ffd204;
 }
 
 .flex {
 	z-index: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
 	height: 10vh;
 	width: 100vw;
 	border-radius: 4px;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	padding: 1%;
 	background-color: white;
 	opacity: 90%;
@@ -98,11 +114,18 @@ span {box-shadow: inset 0 -1.7rem 0 -1px #ffd204}
 }
 
 .boxed {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-flow: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-flow: column;
+	        flex-flow: column;
 	width: 100vw;
 	margin: 0;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	/*border: 2px solid blue;*/
 }
 
@@ -167,6 +190,8 @@ div.active {
 	background-color: transparent;
 	padding-top: 3rem;
 	bottom: -.6rem;
+	-webkit-transition: bottom 1s ease-in-out;
+	-o-transition: bottom 1s ease-in-out;
 	transition: bottom 1s ease-in-out;
 }
 
@@ -180,9 +205,14 @@ div.active:hover {
 	nav.flex {
 		width: 100vw;
 		height: auto;
-		flex-wrap: wrap;
-		flex-flow: column;
-		align-content: flex-start;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-flow: column;
+		        flex-flow: column;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
 		position: relative;
 		top: 0;
 		}
